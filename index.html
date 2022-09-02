@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Today</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tasks</h1>
+        <div class="tasks-container">
+            <!-- <div class="task">
+                <div class="task_date" id="task_date">
+                    12/01/22
+                </div>
+                <div class="task_title" id="task_title">
+                    Title
+                </div>
+                <div class="task_content" id="task_content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quia in aliquam mollitia harum.
+                    Dolor enim, a eos architecto fugit quidem doloribus harum?
+                </div>
+                <div class="task_time" id="task_time">
+                    10:50
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="floatingbtn" id="taskBtn">
+        <p>
+            +</p>
+    </div>
+
+    <div id="taskForm">
+        <h1>
+            Add Task
+        </h1>
+        <div class="input_area">
+            Task
+            <input type="text" id="taskTitle" name="taskTitle" />
+            <textarea name="taskContent" id="taskContent"></textarea>
+            Time
+            <input type="time" id="taskTime" name="taskTime" />
+            <button onclick="addTask()">Add</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
