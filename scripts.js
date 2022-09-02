@@ -6,7 +6,7 @@ const taskContent = document.getElementById("task_content");
 const taskTime = document.getElementById("task_time");
 
 taskBtn.addEventListener("click", () => {
-    document.getElementById("taskForm").style.display = "block"
+    document.getElementById("taskForm").style.display = "block";
 })
 
 function addTask() {
@@ -50,6 +50,17 @@ function addTask() {
     window.location.reload(true);
 }
 
+function closeAddTask () {
+    document.getElementById("taskForm").style.display = "none";
+}
+
+function clearTasks () {
+    window.localStorage.clear('myTasks');
+
+    // ========= reload the window at end ========== //
+    window.location.reload(true);
+}
+
 const myTasks = JSON.parse(localStorage.getItem("myTasks"))
 console.log(myTasks)
 
@@ -60,6 +71,7 @@ if (window.localStorage.getItem("myTasks") === null) {
     console.log("Empty tasks!");
     task.style.display = "none";
 } else {
+    document.getElementById("clear_btn").disabled = false;
     for (let i = 0; i < myTasks.length; i++) {
         const myTasksList = Object.assign({}, myTasks[i]);
         var div = document.createElement("div");

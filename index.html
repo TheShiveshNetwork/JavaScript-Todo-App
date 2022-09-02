@@ -30,9 +30,14 @@
             </div> -->
         </div>
     </div>
-    <div class="floatingbtn" id="taskBtn">
-        <p>
-            +</p>
+    <div class="buttons">
+        <button id="clear_btn" disabled="true" onclick="clearTasks()">
+            Clear
+        </button>
+        <div class="floatingbtn" id="taskBtn">
+            <p>
+                +</p>
+        </div>
     </div>
 
     <div id="taskForm">
@@ -46,6 +51,7 @@
             Time
             <input type="time" id="taskTime" name="taskTime" />
             <button class="addtask" onclick="addTask()">Add</button>
+            <button class="closeAddTask" onclick="closeAddTask()">Close</button>
         </div>
     </div>
 
