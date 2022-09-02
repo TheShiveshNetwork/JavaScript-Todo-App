@@ -46,8 +46,8 @@ function addTask() {
         window.localStorage.setItem("myTasks", JSON.stringify(ToDo))
     }
 
-    // ========= hide the window at end ========== //
-    document.getElementById("taskForm").style.display = "none"
+    // ========= reload the window at end ========== //
+    window.location.reload(true);
 }
 
 const myTasks = JSON.parse(localStorage.getItem("myTasks"))
@@ -60,31 +60,6 @@ if (window.localStorage.getItem("myTasks") === null) {
     console.log("Empty tasks!");
     task.style.display = "none";
 } else {
-    // for (let i = 0; i < myTasks.length; i++) {
-    //     const myTasksList = Object.assign({}, myTasks[i]);
-    //     console.log(myTasksList)
-    //     taskDate.innerHTML = myTasksList.taskDate;
-    //     taskTitle.innerHTML = myTasksList.taskTitle;
-    //     taskContent.innerHTML = myTasksList.taskContent;
-    //     taskTime.innerHTML = myTasksList.taskTime;
-    // }
-
-    // Object.entries(myTasks).forEach(([key, value]) => {
-    //     // console.log(myTasks[0])
-    // });
-
-
-    // myTasks.forEach((object, index) => {
-
-    //     // object is giving the one by one object
-    //     console.log(index, object.taskDate, object.taskTitle, object.taskContent, object.taskTime);
-
-    //     // some logic based on your requirement
-    //     taskDate.innerHTML = object.taskDate;
-    //     taskTitle.innerHTML = object.taskTitle;
-    //     taskContent.innerHTML = object.taskContent;
-    //     taskTime.innerHTML = object.taskTime;
-    // });
     for (let i = 0; i < myTasks.length; i++) {
         const myTasksList = Object.assign({}, myTasks[i]);
         var div = document.createElement("div");
